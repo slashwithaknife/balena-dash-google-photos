@@ -8,7 +8,8 @@
 
 Go to [https://photos.google.com](https://photos.google.com) and select the album that you want to share.
 
-Click in the share button, click in the `Create link` button and copy the last part of the url, which is the album id. Example: https://photos.app.goo.gl/`album-id`.
+Click on the share button, then `Create link` and copy the last part of the url, which is the album id. 
+Example: https://photos.app.goo.gl/album-id
 
 #### Add it to balenaCloud
 
