@@ -1,9 +1,10 @@
 ## BalenaDash - Google Photos - Album Slideshow
 
-
 ### Installation 
 
 #### Getting the album-id
+
+![](https://raw.githubusercontent.com/balena-io-playground/balena-dash-google-photos/master/media/getting_album_id.gif)
 
 Go to [https://photos.google.com](https://photos.google.com) and select the album that you want to share.
 
