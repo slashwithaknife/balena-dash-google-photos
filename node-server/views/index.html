@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Photo Gallery</title>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/superslides/0.6.2/jquery.superslides.min.js"></script>
+  
+<style type="text/css">
+  * { 
+  box-sizing: border-box; 
+  }
+  html {
+    margin: 0;
+    background-blend-mode: darken;
+    transition: 3s;
+  }
+  body { 
+    margin: 0; 
+  }
+  
+  #slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+}
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 0;
+}
+.slides-navigation a.next {
+  right: 0;
+}
+
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.slides-pagination a {
+  border: 2px solid #222;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+  background: #222;
+}
+  
+</style>
+
+  </head>
+  <body>
+
+<div id="slides">
+  <div class="slides-container">
+<% for(var i=0; i < photos.length; i++) { %>
+    <img src="<%= photos[i] %>"/>
+<% } %>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  
+  $(document).on('init.slides', function() {
+    $('.loading-container').fadeOut(function() {
+      $(this).remove();
+    });
+  });
+
+  $('#slides').superslides({
+    slide_easing: 'easeInOutCubic',
+    slide_speed: 2000,
+    pagination: false,
+    hashchange: true,
+    scrollable: true,
+    play: 5000
+  });
+
+});
+</script>
+
+</body>
+</html>

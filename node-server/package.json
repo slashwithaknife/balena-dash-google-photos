@@ -1,0 +1,31 @@
+{
+  "name": "google-photos-album-slideshow",
+  "version": "1.0.0",
+  "description": "Serving google photos album with nodejs.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balena-io-projects/simple-server-node.git"
+  },
+  "keywords": [
+    "webserver",
+    "nodejs",
+    "expressjs"
+  ],
+  "author": " Daniel Andrade <daniel@balena.io>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/balena-io-projects/simple-server-node/issues"
+  },
+  "homepage": "https://github.com/balena-io-projects/simple-server-node#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "*",
+    "express": "*",
+    "request": "^2.88.0"
+  }
+}

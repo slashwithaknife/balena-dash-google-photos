@@ -1,0 +1,6 @@
+#!/bin/sh
+
+fbcp &
+until ping -c1 node-server ; do :; done
+
+WPELauncher http://node-server

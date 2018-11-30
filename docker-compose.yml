@@ -1,0 +1,14 @@
+version: '2'
+services:
+  node-server:
+    privileged: true
+    restart: always
+    build: ./node-server
+    ports:
+      - "80:80"
+  wpe:
+    depends_on:
+      - node-server
+    privileged: true
+    restart: always
+    build: ./wpe
