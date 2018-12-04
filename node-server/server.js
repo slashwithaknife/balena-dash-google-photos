@@ -25,6 +25,13 @@ router.get('/', cors(), function(req, res){
     // Get album id from env variable 
     var albumID = process.env.ALBUM_ID;
 
+    // Set slideshow time
+    if(process.env.SLIDESHOW_DELAY) {
+       var slideshow_timer = process.env.SLIDESHOW_DELAY
+    } else {
+        var slideshow_timer = 10000
+    }  
+
     // Parse photos
     const rx = /\["(https:\/\/[^\.]+.googleusercontent\.com\/[^"]+)",([0-9]+),([0-9]+),/
     const extractPhotos = data => data.match(new RegExp(rx, 'g'))
@@ -49,7 +56,10 @@ router.get('/', cors(), function(req, res){
             // sometimes google gives duplicated items, remove them
             body = removeDups(body)
 
-            res.render('index.html', {photos: body});
+            res.render('index.html', {
+                photos: body, 
+                timer: slideshow_timer
+            });
         }
 
         // if there are errors 
