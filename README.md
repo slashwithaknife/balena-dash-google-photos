@@ -1,6 +1,10 @@
 ## BalenaDash - Google Photos - Album Slideshow
 
+This project makes it very easy to run a google-photos slideshow on any display using a Raspberry Pi and balenaCloud.
+
 ### Installation 
+
+If you are using the official Raspberry Pi 7 inch display, you can follow [this tutorial](https://www.balena.io/blog/assembling-the-official-raspberry-pi-touchscreen) to assemble and configure the screen to your device.
 
 #### Getting the album-id
 
