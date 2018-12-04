@@ -21,7 +21,7 @@ Click in the share button, click in the `Create link` button and copy the last p
 
 On balenaCloud, add a variable called  `ALBUM_ID` and set the value to the one you copied from google photos.
 
-The default delay between picture is set to 10000 milliseconds, or 10 seconds. 
+The default delay between pictures is set to 10000 milliseconds, or 10 seconds. 
 If you would like to change this value, you can use the variable `SLIDESHOW_DELAY` and set it to the value in milliseconds that you desire.
 
 ### Git 

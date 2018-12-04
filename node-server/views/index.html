@@ -101,16 +101,10 @@
 
 <script>
 $(document).ready(function() {
-  
-  $(document).on('init.slides', function() {
-    $('.loading-container').fadeOut(function() {
-      $(this).remove();
-    });
-  });
 
   $('#slides').superslides({
     slide_easing: 'easeInOutCubic',
-    slide_speed: 2000,
+    slide_speed: 4000,
     pagination: false,
     hashchange: true,
     scrollable: true,
